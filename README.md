@@ -10,7 +10,7 @@ Responsive Design: A user-friendly and responsive interface, allowing users to c
 Persistent Data: Messages are stored in MongoDB, providing a persistent record of conversations even after users log out.
 
 Setup Instructions:
-Clone the repository: git clone [https://github.com/your-username/MERN-Chat-App-with-Socket.IO.git](https://github.com/NabeelNizar786/ChatApp-React-Node-js-Socket.io)
+Clone the repository: git clone https://github.com/NabeelNizar786/ChatApp-React-Node-js-Socket.io
 Install dependencies for both the client and server: cd Frontend && npm install and cd Backend && npm install
 Configure MongoDB: Update the MongoDB connection string in the server's .env file.
 Run the development server: npm run dev and cd Frontend && npm run dev
