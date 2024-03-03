@@ -1,21 +1,20 @@
 const express = require("express");
 const app = express();
 const dotenv = require("dotenv");
-const { users } = require("./data/data");
 const connectDb = require("./config/db");
-const colors = require('colors')
+const colors = require("colors");
+const userRoutes = require("./routes/userRoutes");
+const { notFound, errorHandler } = require("./middlewares/errorMiddleware");
 
 dotenv.config();
 
 connectDb();
 
-app.get("/", (req, res) => {
-  res.send("Server Is Live");
-});
+app.use(express.json());
+app.use("/api/user", userRoutes);
 
-app.get("/api/users", (req, res) => {
-  res.send(users);
-});
+app.use(notFound)
+app.use(errorHandler)
 
 const PORT = process.env.PORT || 3000;
 
